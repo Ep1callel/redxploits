@@ -1,0 +1,134 @@
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+
+Rayfield:LoadConfiguration()
+
+local Window = Rayfield:CreateWindow({
+   Name = "Redxploits Menu - 0.1 [Beta]",
+   Icon = "scroll-text", -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
+   LoadingTitle = "Redxploits Menu",
+   LoadingSubtitle = "Loading stuff",
+   Theme = "Default", -- Check https://docs.sirius.menu/rayfield/configuration/themes
+
+   DisableRayfieldPrompts = false,
+   DisableBuildWarnings = false, -- Prevents Rayfield from warning when the script has a version mismatch with the interface
+
+   ConfigurationSaving = {
+      Enabled = true,
+      FolderName = nil, -- Create a custom folder for your hub/game
+      FileName = "Big Hub"
+   },
+
+   Discord = {
+      Enabled = false, -- Prompt the user to join your Discord server if their executor supports it
+      Invite = "noinvitelink", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ ABCD would be ABCD
+      RememberJoins = true -- Set this to false to make them join the discord every time they load it up
+   },
+
+   KeySystem = true, -- Set this to true to use our key system
+   KeySettings = {
+      Title = "Redxploits Key System",
+      Subtitle = "To access, Type the correct key",
+      Note = "No method of obtaining the key is provided", -- Use this to tell the user how to get a key
+      FileName = "Key", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
+      SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
+      GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+      Key = {"zt1j"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
+   }
+})
+
+-- SCRIPTS, TABS, BUTTONS
+
+-- This line here creates a tab
+local Tab = Window:CreateTab("Exploits", "terminal") -- Title, Image
+-- Creates a section
+local Section = Tab:CreateSection("OP Scripts")
+-- This creates a button to click ig
+local Button = Tab:CreateButton({
+
+   Name = "Run Infinite Yield",
+   Callback = function()
+
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
+   end,
+})
+-- This creates a button to click ig
+local Button = Tab:CreateButton({
+   Name = "Run ESP Menu",
+   Callback = function()
+
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/wa0101/Roblox-ESP/refs/heads/main/esp.lua",true))()
+   end,
+})
+-- This creates a button to click ig
+local Button = Tab:CreateButton({
+
+   Name = "Run Aimbot",
+   Callback = function()
+
+   local Aimbot = loadstring(game:HttpGet("https://raw.githubusercontent.com/Exunys/Aimbot-V3/main/src/Aimbot.lua"))()
+Aimbot.Load()
+   end,
+})
+-- This creates a button to click ig
+local Button = Tab:CreateButton({
+
+   Name = "Solara Hub V3",
+   Callback = function()
+
+   loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/Solara%20Hub%20v3.txt"))()
+   end,
+})
+local Section = Tab:CreateSection("Harmless Scripts")
+-- This creates a button to click ig
+local Button = Tab:CreateButton({
+   Name = "Anti AFK",
+   Callback = function()
+
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/luca5432/Roblox-ANTI-AFK-SCRIPT/719e6c58ce42be4029e10828cbfdda0f6d25b366/Script",true))()
+   end,
+})
+
+-- This creates a button to click ig
+local Button = Tab:CreateButton({
+   Name = "Rejoin Server",
+   Callback = function()
+
+   loadstring(game:HttpGet("https://pastebin.com/raw/1gtVMUz3"))()
+   end,
+})
+-- This line here creates a tab
+local Tab = Window:CreateTab("Game Scripts", "terminal") -- Title, Image
+
+-- This creates a button to click ig
+local Button = Tab:CreateButton({
+   Name = "FTAP Scripts",
+   Callback = function()
+
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/Artss1/Flades_Hub/refs/heads/main/We%20Are%20Arts.lua"))()
+   end,
+})
+-- This line here creates a tab
+local Tab = Window:CreateTab("Options", "ellipsis") -- Title, Image
+-- Options tab
+-- This creates a button to click ig
+local Button = Tab:CreateButton({
+   Name = "Close Redxploits Menu",
+   Callback = function()
+   -- This would close / destroy the menu
+   Rayfield:Destroy()
+   end,
+})
+
+-- This line here creates a tab
+local Tab = Window:CreateTab("Help", "circle-help") -- Title, Image
+-- Creates a label
+local Label = Tab:CreateLabel("Welcome to Redxploits!", "party-popper")
+local Label = Tab:CreateLabel("Redxploits is a free, private exploiting menu just for friends and isn't ment to be shared to the public.", false) -- Title, IgnoreTheme
+local Divider = Tab:CreateDivider()
+
+local Paragraph = Tab:CreateParagraph({Title = "My Redxploit menu wont work.", Content = "Redxploits has bugs. If its not working it may be because your menu or exploits are outdated. If so please press F9 (dev console) to see the error and report it to the owner, if "})
+local Divider = Tab:CreateDivider()
+
+local Paragraph = Tab:CreateParagraph({Title = "Is my menu outdated?", Content ="Your menu may be outdated. To check, head to the discord and wait till verfied. Then you can see if its outdated."})
+
+Rayfield:LoadConfiguration()
