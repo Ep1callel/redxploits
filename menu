@@ -3,7 +3,7 @@ local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 Rayfield:LoadConfiguration()
 
 local Window = Rayfield:CreateWindow({
-   Name = "Redxploits Menu - 0.1 [Beta]",
+   Name = "Redxploits Menu - 0.2 [Beta]",
    Icon = "scroll-text", -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
    LoadingTitle = "Redxploits Menu",
    LoadingSubtitle = "Loading stuff",
@@ -19,8 +19,8 @@ local Window = Rayfield:CreateWindow({
    },
 
    Discord = {
-      Enabled = false, -- Prompt the user to join your Discord server if their executor supports it
-      Invite = "noinvitelink", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ ABCD would be ABCD
+      Enabled = true, -- Prompt the user to join your Discord server if their executor supports it
+      Invite = "QR3FCBfmxB", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ ABCD would be ABCD
       RememberJoins = true -- Set this to false to make them join the discord every time they load it up
    },
 
@@ -69,15 +69,7 @@ local Button = Tab:CreateButton({
 Aimbot.Load()
    end,
 })
--- This creates a button to click ig
-local Button = Tab:CreateButton({
 
-   Name = "Solara Hub V3",
-   Callback = function()
-
-   loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/Solara%20Hub%20v3.txt"))()
-   end,
-})
 local Section = Tab:CreateSection("Harmless Scripts")
 -- This creates a button to click ig
 local Button = Tab:CreateButton({
@@ -88,14 +80,6 @@ local Button = Tab:CreateButton({
    end,
 })
 
--- This creates a button to click ig
-local Button = Tab:CreateButton({
-   Name = "Rejoin Server",
-   Callback = function()
-
-   loadstring(game:HttpGet("https://pastebin.com/raw/1gtVMUz3"))()
-   end,
-})
 -- This line here creates a tab
 local Tab = Window:CreateTab("Game Scripts", "terminal") -- Title, Image
 
@@ -111,6 +95,15 @@ local Button = Tab:CreateButton({
 local Tab = Window:CreateTab("Options", "ellipsis") -- Title, Image
 -- Options tab
 -- This creates a button to click ig
+local Button = Tab:CreateButton({
+   Name = "Placeholder",
+   Callback = function()
+   
+   print("placeholder button")
+   loadstring(game:HttpGet(""))()
+   end,
+})
+local Section = Tab:CreateSection("Close Menu")
 local Button = Tab:CreateButton({
    Name = "Close Redxploits Menu",
    Callback = function()
@@ -130,5 +123,6 @@ local Paragraph = Tab:CreateParagraph({Title = "My Redxploit menu wont work.", C
 local Divider = Tab:CreateDivider()
 
 local Paragraph = Tab:CreateParagraph({Title = "Is my menu outdated?", Content ="Your menu may be outdated. To check, head to the discord and wait till verfied. Then you can see if its outdated."})
+
 
 Rayfield:LoadConfiguration()
